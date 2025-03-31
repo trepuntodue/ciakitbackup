@@ -1,0 +1,69 @@
+.card {
+  @apply mx-8 rounded-none border-0 bg-transparent sm:mx-4;
+
+  img {
+    @apply w-full;
+  }
+
+  .title {
+    @apply mt-4 mb-1 min-h-[2.5rem] text-center font-bold uppercase text-themeColor-500 line-clamp-2;
+    line-height: 1em;
+
+    a {
+      @apply text-themeColor-500;
+    }
+  }
+
+  ul.info {
+    @apply flex flex-row justify-center border-gray-200 first-of-type:border-b-[1px];
+
+    li {
+      @apply py-1 text-sm;
+
+      line-height: 1.2em;
+
+      &.genres {
+        @apply text-center;
+      }
+
+      & + li {
+        @apply ml-2 border-l-[1px] border-gray-200  pl-2;
+      }
+    }
+
+    &.master_director-wrapper {
+      li {
+        @apply text-center text-xs line-clamp-2;
+      }
+    }
+  }
+}
+
+.bgdark {
+  ul.info {
+    @apply border-zinc-800;
+
+    li {
+      & + li {
+        @apply border-zinc-800;
+      }
+    }
+  }
+}
+
+//pagine griglie e liste
+.grid {
+  .card {
+    @apply mb-4;
+
+    img {
+      @apply object-center;
+    }
+
+    ul.info {
+      li {
+        @apply text-sm;
+      }
+    }
+  }
+}

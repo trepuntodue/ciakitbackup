@@ -1,0 +1,12 @@
+.searchbar {
+  form {
+    @apply w-full;
+
+    input {
+      @apply rounded-t-full rounded-b-full rounded-tr-none rounded-br-none;
+    }
+    #header-search-icon {
+      @apply overflow-hidden rounded-tr-full rounded-br-full;
+    }
+  }
+}

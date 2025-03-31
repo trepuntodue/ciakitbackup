@@ -1,0 +1,20 @@
+.main-content-wrapper {
+  @apply min-h-0 #{!important};
+}
+
+.account-table-content {
+  @apply max-w-2xl;
+}
+
+.account-content,
+.auth-content {
+  @apply px-4 py-4;
+
+  .body {
+    @apply bg-gray-100 shadow-xl;
+  }
+
+  #date-of-birth {
+    @apply after:ml-28 #{!important};
+  }
+}

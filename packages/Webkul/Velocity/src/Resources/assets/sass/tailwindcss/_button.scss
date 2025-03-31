@@ -1,0 +1,49 @@
+.btn {
+  @apply block max-w-fit rounded-full bg-themeColor-500 px-4 py-1 text-sm font-bold uppercase text-black;
+
+  &:hover {
+    @apply bg-themeColor-400 transition-all #{!important};
+
+    svg {
+      @apply scale-125;
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(239, 198, 34, 0.25) #{!important};
+  }
+
+  &--black {
+    @apply bg-black text-white;
+
+    &:hover {
+      @apply bg-slate-800 text-white #{!important};
+    }
+  }
+
+  .label-over {
+    @apply absolute z-10 hidden w-48 rounded-lg bg-gray-700 px-2 py-1 text-center text-xs font-normal lowercase text-white shadow-2xl before:absolute before:left-1/2 before:top-[100%] before:-translate-x-1/2 before:-rotate-90 before:border-8 before:border-y-transparent before:border-l-transparent before:border-r-gray-700 before:content-[''];
+
+    height: 40px !important;
+    line-height: 1.2em !important;
+    margin-top: -20px !important;
+    left: 50%;
+    margin-left: -6rem;
+    bottom: calc(100% + 1rem) !important;
+  }
+}
+
+button.theme-btn {
+  &.light {
+    @apply rounded-lg border-none bg-themeColor-500 uppercase text-black hover:border-none hover:bg-themeColor-400 #{!important};
+  }
+}
+
+button.theme-btn,
+a.theme-btn {
+  @apply rounded-lg border-none bg-themeColor-500 uppercase text-black hover:border-none hover:bg-themeColor-400 #{!important};
+}
+
+input.theme-btn {
+  @apply rounded-lg border-none bg-themeColor-500 uppercase text-black hover:border-none hover:bg-themeColor-400 #{!important};
+}

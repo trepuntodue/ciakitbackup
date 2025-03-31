@@ -1,0 +1,60 @@
+.vetrina-blog {
+  .vetrina-wrapper {
+    @apply container grid grid-cols-1 justify-items-stretch sm:mt-8 sm:gap-8 lg:grid-flow-col lg:grid-cols-2 lg:grid-rows-2 mx-auto;
+
+    .content {
+      @apply px-8 sm:px-8;
+    }
+
+    h3 {
+      @apply text-themeColor-500 text-2xl sm:mb-4;
+    }
+
+    a {
+      @apply text-themeColor-500 underline mt-4;
+    }
+
+    .article-wrapper {
+      &:first-child {
+        @apply relative w-full overflow-hidden sm:pb-[50%] sm:mb-0 lg:row-span-2 #{!important};
+
+        .shadow {
+          @apply hidden absolute inset-0 z-10 h-full w-full bg-gradient-to-b from-transparent to-black sm:block;
+        }
+
+        img {
+          @apply px-8 sm:px-0 relative inset-0 z-0 w-full object-left object-cover sm:absolute sm:h-full #{!important};
+        }
+
+        .content {
+          @apply relative sm:bottom-0 sm:left-0 z-20 w-full pt-2 sm:absolute sm:p-8;
+
+          p {
+            @apply sm:text-white;
+          }
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        @apply flex flex-col pt-8 sm:flex-row sm:gap-8 sm:py-0;
+
+        .shadow {
+          @apply hidden;
+        }
+
+        img {
+          @apply px-8 sm:px-0 sm:aspect-3/4 relative z-0 w-full sm:w-52 h-auto object-cover;
+        }
+
+        .content {
+          @apply px-8 sm:px-0;
+        }
+
+        h3 {
+          @apply mt-2;
+        }
+      }
+    }
+  }
+}

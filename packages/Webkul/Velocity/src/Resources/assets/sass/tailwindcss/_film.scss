@@ -1,0 +1,79 @@
+.master,
+.release {
+  a.collection,
+  a.favorite {
+    span.btn-action {
+      @apply items-center gap-2 text-left text-xs sm:text-sm;
+    }
+  }
+
+  .btn {
+    @apply w-full max-w-[18rem];
+  }
+
+  .movie {
+    @apply px-4 #{!important};
+
+    &.product-detail {
+      @apply border-b-4 border-gray-100 py-8 #{!important};
+
+      .tabcontent {
+        @apply border-t-4 border-gray-100 pt-4;
+      }
+
+      .info {
+        ul {
+          li {
+            span {
+              @apply mr-2 font-bold;
+            }
+          }
+        }
+      }
+
+      .product-image-group {
+        .outer-assets-container {
+          @apply mx-auto;
+        }
+
+        .copertina {
+          @apply mx-auto mb-4 w-full sm:px-4;
+        }
+
+        // lightbox app tb
+        #app {
+          ul {
+            @apply mx-6 mt-4 p-0;
+
+            .tb-gallery {
+              @apply inline-block hover:border-themeColor-500;
+
+              width: 23%;
+              margin: 0 1%;
+              border: 3px solid #d7d7d7;
+              padding: 5px;
+
+              img {
+                @apply cursor-pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tablinks {
+  &.description {
+    @apply m-0 overflow-hidden whitespace-nowrap rounded-t-xl py-2 sm:px-4;
+
+    h2 {
+      @apply font-bold text-themeColor-500 underline decoration-1 sm:text-xl #{!important};
+    }
+
+    &.active {
+      @apply sm:bg-gray-100;
+    }
+  }
+}

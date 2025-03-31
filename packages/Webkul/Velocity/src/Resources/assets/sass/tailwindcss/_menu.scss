@@ -1,0 +1,13 @@
+.navigation {
+  li {
+    a {
+      @apply text-lg #{!important};
+    }
+
+    &.active {
+      a {
+        @apply text-themeColor-500 underline #{!important};
+      }
+    }
+  }
+}

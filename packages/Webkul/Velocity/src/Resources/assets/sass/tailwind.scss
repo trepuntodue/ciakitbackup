@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tailwindcss/header";
+@import "tailwindcss/menu";
+@import "tailwindcss/wrapper";
+@import "tailwindcss/button";
+@import "tailwindcss/typo";
+@import "tailwindcss/list";
+@import "tailwindcss/account";
+@import "tailwindcss/carousel";
+@import "tailwindcss/searchbar";
+@import "tailwindcss/film";
+@import "tailwindcss/tinyslider";
+
+@import "tailwindcss/blog";
+
+.container {
+  @apply pl-0 pr-0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#app {
+  flex: 1;
+}
+
+// c:\laragon\www\ciakitdev2\ciakit\laravel\packages\Webkul\Velocity\src\Resources\assets\sass\tailwind.scss
+.cms-page-container {
+  @apply max-w-screen-xl mx-auto;
+
+  h1 {
+    @apply my-6 text-3xl;
+  }
+  p {
+    & + p {
+      @apply mt-4;
+    }
+  }
+}
+
+//HEADER
+
+.logo {
+  @apply my-2 aspect-3/2 w-24 px-0 text-4xl font-bold text-white;
+}
+
+.main-menu {
+  > ul {
+    @apply flex h-full items-center;
+
+    > li {
+      @apply mx-4 first-of-type:ml-8 first-of-type:border-l-0 first-of-type:border-gray-600 first-of-type:pl-8;
+
+      > a {
+        @apply font-bold text-white;
+      }
+
+      ul {
+        a {
+          @apply text-black  hover:underline #{!important};
+        }
+      }
+    }
+  }
+}
+
+//HOME
+// .hero-movie {
+//   @apply relative max-h-36 overflow-hidden bg-slate-200 sm:h-[40vh] sm:max-h-56 sm:min-h-[20rem] bg-black;
+//   .info {
+//     @apply absolute inset-0 z-10;
+//   }
+//   img {
+//     @apply h-full w-full object-cover md:aspect-16/9;
+//   }
+// }
+.hero-movie {
+  @apply relative overflow-hidden bg-black;
+  img {
+    @apply h-full w-full object-cover md:aspect-16/9;
+  }
+}
+
+//FOOTER
+.footer {
+  @apply mt-16;
+
+  .newsletter-wrapper {
+    @apply flex w-full justify-center;
+    .social-icons {
+      @apply flex w-full justify-center;
+    }
+  }
+}
